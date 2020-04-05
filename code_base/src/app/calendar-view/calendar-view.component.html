@@ -1,0 +1,24 @@
+<div class="calendar-wrapper">
+    <div>
+      <div class="calendar-time-display" *ngFor="let times of timeArray; let i = index">
+        <div class="one-hour" ng-repeat="times in timeArray">
+          <span class="one-hour-value">
+            {{times.value}}:00
+          </span>
+          <span class="one-hour-unit">
+         {{times.unit}}
+          </span>
+         </div>
+        <div class="half-hour" ng-repeat="times in timeArray" *ngIf="i !== timeArray.length -1">
+          {{times.value}}:30
+        </div>
+      </div>
+    </div>
+    <div class="calendar-event-display">
+      <div class="events">
+        <div *ngFor="let event of eventArr">
+            <app-calendar-event  [startX]="event.start_x" [startY]="event.start_y" [height]="event.height" [width]="event.width">
+              </app-calendar-event>
+          </div>
+      </div>
+    </div>

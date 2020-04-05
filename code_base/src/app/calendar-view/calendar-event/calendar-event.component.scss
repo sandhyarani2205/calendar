@@ -1,0 +1,31 @@
+$color-grey: #868786;
+$color-grey-light: #a8a6a6;
+$color-white: #FFF;
+$color-white-fade: #ececec;
+$color-green: #4ead86;
+$color-green-light:#84b9a9;
+
+.event {
+    position: absolute;
+    background-color: $color-white;
+    margin-left: .5rem;
+    display: flex;
+    .event-border-left{
+        background-color: $color-green;
+        width: .3rem ;
+    }
+    .sample-items{
+        display: flex;
+        flex-direction: column;
+        margin: .5rem 1rem 0 1rem;
+        .sample-item {
+            color: $color-green-light;
+        }
+        .sample-location {
+            font-weight: 100;
+            font-size: .65rem;
+            color: $color-grey;
+        }
+    }
+
+}

@@ -1,0 +1,58 @@
+$color-grey: #868786;
+$color-grey-light: #a8a6a6;
+$color-white-fade: #ececec;
+@mixin hour-format {
+    line-height: 1.875rem;
+    width: 3.75rem;
+    justify-content: space-between;
+}
+
+:host {
+    .calendar-wrapper {
+        display: flex;
+        margin: 1rem 5rem;
+
+        .calendar-time-display {
+            margin-right: 1rem;
+            text-align: end;
+
+            .one-hour {
+                display: flex;
+                justify-content: space-between;
+                @include hour-format;
+                color: $color-grey;
+                margin-top: -.1rem;
+
+                .one-hour-value {
+                    font-weight: 600;
+                    color: $color-grey;
+                    margin-right: .25rem;
+                }
+                .one-hour-unit {
+                    font-weight: 100;
+                    color: $color-grey-light;
+                }
+            }
+
+            .half-hour {
+                font-size: .75rem;
+                @include hour-format;
+                color: $color-grey-light;
+                flex-direction: column;
+            }
+        }
+
+        .calendar-event-display {
+            height: 45rem; //45*16 = 720px
+            width: 37.5rem; // 37.5*16 = 600px
+            padding: 0 0.625rem; // 0.625*16 =10px
+            background-color: $color-white-fade;
+            position: relative;
+
+            .events {
+                margin-left: 1rem;
+            }
+        }
+
+    }
+}
